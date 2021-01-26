@@ -1,0 +1,18 @@
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:vtenhappmerchant/storage_adapters/base_storage_adapter.dart';
+import 'package:vtenhappmerchant/storage_adapters/secure_storage_adapter.dart';
+import 'package:vtenhappmerchant/types/app_env_type.dart';
+
+class ApiConstant {
+  static final String baseUrl = 'http://localhost:8080';
+  static final String path = '/api/v2/storefront';
+  static final String authPath = '/spree_oauth/token';
+
+  static final AppEnvType env = AppEnvType.staging;
+  static final bool useFixture = false;
+
+  static final String clientId = '';
+  static final String clientSecret = '';
+
+  static final int recordPerPage = 10;
+}
