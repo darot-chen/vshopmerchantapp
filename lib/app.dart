@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/all.dart';
+import 'package:vtenhappmerchant/constants/config_constant.dart';
+import 'package:vtenhappmerchant/notifiers/theme_notifier.dart';
+import 'package:vtenhappmerchant/widgets/scale_down_on_tap.dart';
 
-class App extends StatelessWidget {
+class App extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final notifier = useProvider(themeNotifier);
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      title: 'VTenh Merchant',
+      home: MyHomePage(title: 'VTenh App Example'),
+      themeMode: notifier.themeMode,
+      theme: notifier.themeData,
     );
   }
 }
@@ -31,8 +35,15 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _resetCounter() {
+    setState(() {
+      _counter = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    final notifier = context.read(themeNotifier);
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -46,13 +57,31 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            FlatButton.icon(
+              label: Text("Night Mode"),
+              icon: Icon(Icons.brightness_2),
+              onPressed: () {
+                notifier.setMode(!notifier.isDarkMode);
+              },
+            )
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+      floatingActionButton: ScaleDownOnTab(
+        onTap: _incrementCounter,
+        onLongPress: _resetCounter,
+        child: Container(
+          height: ConfigConstant.toolbarHeight,
+          width: ConfigConstant.toolbarHeight,
+          decoration: BoxDecoration(
+            color: Theme.of(context).accentColor,
+            borderRadius: BorderRadius.circular(ConfigConstant.toolbarHeight),
+          ),
+          child: Icon(
+            Icons.add,
+            color: Theme.of(context).primaryColor,
+          ),
+        ),
       ),
     );
   }

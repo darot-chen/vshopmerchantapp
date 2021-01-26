@@ -34,6 +34,10 @@ dependencies:
   shared_preferences: ^0.5.12+4
   flutter_secure_storage: ^3.3.3
 
+  # State management
+  flutter_hooks: ^0.14.0
+  hooks_riverpod: ^0.12.1
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -81,6 +85,17 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts:
+    - family: "DM Sans"
+      fonts:
+        - asset: assets/fonts/DM_Sans/DMSans-Bold.ttf
+        - asset: assets/fonts/DM_Sans/DMSans-BoldItalic.ttf
+        - asset: assets/fonts/DM_Sans/DMSans-Italic.ttf
+        - asset: assets/fonts/DM_Sans/DMSans-Medium.ttf
+        - asset: assets/fonts/DM_Sans/DMSans-MediumItalic.ttf
+        - asset: assets/fonts/DM_Sans/DMSans-Regular.ttf
+          style: italic
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
