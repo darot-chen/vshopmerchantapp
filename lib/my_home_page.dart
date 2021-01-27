@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:vtenhappmerchant/models/global_model.dart';
 import 'package:vtenhappmerchant/notifiers/langs_notifier.dart';
+import 'package:vtenhappmerchant/social_signin.dart';
 import 'constants/config_constant.dart';
 import 'mixins/toast.dart';
 import 'notifiers/theme_notifier.dart';
@@ -45,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> with Toast {
           children: <Widget>[
             Text(tr('you_can_push_the_button_this_many_times')),
             const SizedBox(height: ConfigConstant.margin),
+
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
@@ -117,6 +119,11 @@ class _MyHomePageState extends State<MyHomePage> with Toast {
                 );
               },
             ),
+
+            const SizedBox(height: ConfigConstant.margin),
+
+            //social sign in
+            SocialSignIn(),
           ],
         ),
       ),
