@@ -22,7 +22,7 @@ class SocialSignIn extends ConsumerWidget {
       'name': "Google",
       'color': Color(0xFFd9372d),
       'onPressed': () async {
-        // await notifier.logInWithGoogle(context);
+        await notifier.logInWithGoogle(context);
       },
     };
     var facebookSignIn = {
