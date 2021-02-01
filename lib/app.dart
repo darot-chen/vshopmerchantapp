@@ -2,10 +2,10 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
-import 'package:vtenhappmerchant/my_home_page.dart';
 import 'package:vtenhappmerchant/notifiers/langs_notifier.dart';
 import 'package:vtenhappmerchant/notifiers/theme_notifier.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:vtenhappmerchant/screens/landing_screen.dart';
 
 class App extends HookWidget {
   @override
@@ -15,7 +15,7 @@ class App extends HookWidget {
 
     return MaterialApp(
       title: 'VTenh Merchant',
-      home: MyHomePage(title: 'VTenh App Example'),
+      home: LandingScreen(),
 
       //localize
       localizationsDelegates: localNotifier.localizationDelegates,

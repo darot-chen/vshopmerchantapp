@@ -7,7 +7,7 @@ mixin Toast {
     BotToast.showNotification(
       leading: (_) => Container(
         height: double.infinity,
-        width: ConfigConstant.margin,
+        width: ConfigConstant.margin1,
         alignment: Alignment.center,
         child: Icon(Icons.error),
       ),
@@ -28,7 +28,7 @@ mixin Toast {
     BotToast.showNotification(
       leading: (_) => Container(
         height: double.infinity,
-        width: ConfigConstant.margin,
+        width: ConfigConstant.margin2,
         alignment: Alignment.center,
         child: Icon(Icons.verified),
       ),
