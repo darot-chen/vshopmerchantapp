@@ -1,0 +1,4 @@
+enum SessionFlowType {
+  signup,
+  signin,
+}

@@ -7,6 +7,10 @@ part 'account_model.g.dart';
 class AccountModel extends BaseModel {
   String id;
   String login;
+  String email;
+  String username;
+  @JsonKey(name: 'phone_number', nullable: false)
+  String phoneNumber;
   @JsonKey(name: 'store_credits', nullable: false)
   double storeCredits;
   @JsonKey(name: 'completed_orders', nullable: false)
@@ -18,6 +22,9 @@ class AccountModel extends BaseModel {
   AccountModel({
     String id,
     this.login,
+    this.email,
+    this.username,
+    this.phoneNumber,
     this.storeCredits,
     this.completedOrders,
     this.password,
@@ -29,6 +36,6 @@ class AccountModel extends BaseModel {
   Map<String, dynamic> toJson() => _$AccountModelToJson(this);
 
   List<String> paramNames() {
-    return ["login", "password", "password_confirmation"];
+    return ["email", "phone_number", "username", "password", "password_confirmation"];
   }
 }

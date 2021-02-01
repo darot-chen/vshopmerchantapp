@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:vtenhappmerchant/models/global_model.dart';
 import 'package:vtenhappmerchant/notifiers/langs_notifier.dart';
+import 'package:vtenhappmerchant/screens/account/account_screen_wrapper.dart';
 import 'package:vtenhappmerchant/screens/authentication/social_signin.dart';
 import '../constants/config_constant.dart';
 import '../mixins/toast.dart';
@@ -115,6 +116,24 @@ class _MyHomePageState extends State<MyHomePage> with Toast {
                         ),
                       ),
                     ),
+                  ),
+                );
+              },
+            ),
+
+            //error toast
+            FlatButton(
+              color: Theme.of(context).errorColor,
+              child: Text(
+                "Sign In",
+                style: TextStyle(color: Colors.white),
+              ),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return AccountScreenWrapper();
+                    },
                   ),
                 );
               },

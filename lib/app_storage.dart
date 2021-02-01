@@ -10,9 +10,9 @@ class AppStorage {
 
   static BaseStorageAdapter get preferenceAdapter {
     if (_preferenceAdapter != null) return _preferenceAdapter;
-    // _preferenceAdapter = SharedPreferenceStorageAdapter();
-    _preferenceAdapter = MemoryStorageAdapter();
-    //  _secureAdapter = SecureStorageAdapter();
+    _preferenceAdapter = SharedPreferenceStorageAdapter();
+    // _preferenceAdapter = MemoryStorageAdapter();
+    // _secureAdapter = SecureStorageAdapter();
     return _preferenceAdapter;
   }
 
@@ -23,8 +23,8 @@ class AppStorage {
   static BaseStorageAdapter get secureAdapter {
     if (_secureAdapter != null) return _secureAdapter;
     if (ApiConstant.env != AppEnvType.production) {
-      // _secureAdapter = SharedPreferenceStorageAdapter();
-      _secureAdapter = MemoryStorageAdapter();
+      _secureAdapter = SharedPreferenceStorageAdapter();
+      // _secureAdapter = MemoryStorageAdapter();
       // _secureAdapter = SecureStorageAdapter();
     } else {
       // _secureAdapter = MemoryStorageAdapter();
