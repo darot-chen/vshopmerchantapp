@@ -9,10 +9,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(
-        title: 'Flutter Demo Home Page',
-        key: UniqueKey(),
-      ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
