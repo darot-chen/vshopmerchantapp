@@ -28,6 +28,30 @@ dependencies:
   font_awesome_flutter: ^8.11.0
   intro_slider: ^2.3.3
   lottie: ^0.7.0+1
+  slide_to_confirm: ^0.0.7
+  flip_card: ^0.4.4
+  touchable_opacity: ^1.1.2
+
+  intl_phone_number_input:
+    git:
+      url: 'git@github.com:natintosh/intl_phone_number_input.git'
+      ref: develop
+  r_dart_library:
+    git:
+      url: 'https://github.com/YK-Unit/r_dart_library.git'
+      ref: 0.2.1
+
+  #loading effect
+  shimmer: ^1.1.2
+
+  #form
+  reactive_forms: ^7.4.0
+  pinput: ^0.2.6
+
+  #networkimage
+  flutter_cache_manager: ^2.0.0
+  cached_network_image: ^2.3.3
+  progressive_image: ^1.0.1
 
   # Networking
   dio: ^3.0.9
@@ -84,6 +108,7 @@ flutter:
     - assets/translations/langs.csv
     - assets/images/introduction/
     - assets/animation/
+    - assets/images/product/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

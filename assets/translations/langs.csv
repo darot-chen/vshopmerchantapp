@@ -1,13 +1,41 @@
 str,en,km
-welcome_to_vtenh,Welcome to VTenh,សូមស្វាគមន៍មកកាន់ VTenh
-making_your_shopping_experience_easy_and_convenient,Making your shopping experience easy and convenient,ការធ្វើឱ្យបទពិសោធទិញទំនិញរបស់អ្នកងាយស្រួល
+completed_orders,Completed orders,ការបញ្ជាទិញបានបញ្ចប់
 connect_sorrounding_store,Connect sorrounding store,ហាងភ្ជាប់ sorrounding
-see_all_things_shops_around_you_just_by_a_click_in_your_phone,See all things shops around you just by a click in your phone,សូមមើលសេចក្ដីទាំងអស់នៅជុំវិញហាងអ្នកដោយគ្រាន់តែចុចនៅក្នុងទូរស័ព្ទរបស់អ្នក
-flash_sale_promotion_and_trending_products,Flash sale promotion and trending products,ការផ្សព្វផ្សាយការលក់និងផលិតផលនិន្នាការភ្ល
-find_your_items_and_shop,Find your items and shop,រកឃើញធាតុនិងហាងលក់របស់អ្នក
-find_your_favorite_items_from_our_market_places,Find your favorite items from our market places,រកឃើញធាតុដែលអ្នកពេញចិត្តពីកន្លែងទីផ្សាររបស់យើង
+continue,Continue,បន្ត
+continue,Continue,បន្ត
+continue_with_email,Continue with email,បន្តជាមួយអ៊ីម៉ែល
+continue_with_mobile_phone,Continue with mobile phone,បន្តជាមួយទូរស័ព្ទដៃ
+email,Email,អ៊ីម៉ែល
+enter_your_email_address,Enter your email address,សូម​ប​ញ្ជូ​ល​អាសយដ្ឋាន​អ៊ី​ម៊ែ​ល​របស់​អ្នក
+enter_your_password,Enter your password,បញ្ចូលពាក្យសម្ងាត់របស់អ្នក
+enter_your_phone_number,Enter your phone number,បញ្ចូលលេខទូរស័ព្ទរបស់អ្នក
+error,Error,កំហុសក្នុងការ
 fast_shipment,Fast shipment,ការនាំចេញដែលមានល្បឿនលឿន
-your_order_shipped_and_we_give_your_tracking_code_and_get_notified,Your order shipped and we give your tracking code and get notified,ការបញ្ជាទិញរបស់អ្នកបាននាំចេញហើយយើងផ្ដល់កូដតាមដានរបស់អ្នកនិងទទួលបានការជូនដំណឹង
-receive_your_items,Receive your items,ទទួលបានធាតុរបស់អ្នក
+find_your_favorite_items_from_our_market_places,Find your favorite items from our market places,រកឃើញធាតុដែលអ្នកពេញចិត្តពីកន្លែងទីផ្សាររបស់យើង
+find_your_items_and_shop,Find your items and shop,រកឃើញធាតុនិងហាងលក់របស់អ្នក
+flash_sale_promotion_and_trending_products,Flash sale promotion and trending products,ការផ្សព្វផ្សាយការលក់និងផលិតផលនិន្នាការភ្ល
+forgot_password,Forgot password,ភ្លេច​លេខសំងាត់​
 get_your_belowed_items_to_your_shopping_bag_has_never_been_easier_before,Get your belowed items to your shopping bag has never been easier before,ទទួលបានធាតុ belowed របស់អ្នកទៅកាន់ថង់ដើរទិញឥវ៉ាន់របស់អ្នកមិនមានភាពងាយស្រួលមុនពេល
+input_value,Input value,តម្លៃបញ្ចូល
+language,Language,ភាសា
+loaded,Loaded,បានផ្ទុក
+making_your_shopping_experience_easy_and_convenient,Making your shopping experience easy and convenient,ការធ្វើឱ្យបទពិសោធទិញទំនិញរបស់អ្នកងាយស្រួល
+mobile_phone,Mobile phone,ទូរស័ព្ទចល័ត
+my_account,My account,គណនី​របស់ខ្ញុំ
+night_mode,Night mode,របៀបរាត្រី
+or_sign_in_with,Or sign in with,ឬចូលដោយ
+password,Password,ការពាក្យសម្ងាត់
+receive_your_items,Receive your items,ទទួលបានធាតុរបស់អ្នក
+reset,Reset,កំណត់ឡើងវិញ
+search_country_name_or_code,Search country name or code,ស្វែងរកឈ្មោះប្រទេសឬលេខកូដ
+see_all_things_shops_around_you_just_by_a_click_in_your_phone,See all things shops around you just by a click in your phone,សូមមើលសេចក្ដីទាំងអស់នៅជុំវិញហាងអ្នកដោយគ្រាន់តែចុចនៅក្នុងទូរស័ព្ទរបស់អ្នក
+sign_in,Sign in,ចុះឈ្មោះចូល
+store_credit,Store credit,ឥណទានហាង
+success,Success,ភាពជោគជ័យ
+vtenh,VTenh,VTenh
+welcome_back,Welcome back,ស្វា​គម​ន៏​ការ​ត្រ​លប់​មក​វិញ
+welcome_to_vtenh,Welcome to VTenh,សូមស្វាគមន៍មកកាន់ VTenh
 you_can_push_the_button_this_many_times,You can push the button this many times,អ្នកអាចជំរុញឱ្យមានប៊ូតុងច្រើនដងនេះ
+you_changed_your_language_to,You changed your language to,អ្នកបានផ្លាស់ប្តូរទៅជាភាសារបស់អ្នក
+your_order_shipped_and_we_give_your_tracking_code_and_get_notified,Your order shipped and we give your tracking code and get notified,ការបញ្ជាទិញរបស់អ្នកបាននាំចេញហើយយើងផ្ដល់កូដតាមដានរបស់អ្នកនិងទទួលបានការជូនដំណឹង
+choose_a_language,Choose a language,ជ្រើសភាសា
