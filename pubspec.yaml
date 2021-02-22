@@ -26,6 +26,8 @@ dependencies:
 
   bot_toast: ^3.0.5
   font_awesome_flutter: ^8.11.0
+  intro_slider: ^2.3.3
+  lottie: ^0.7.0+1
 
   # Networking
   dio: ^3.0.9
@@ -80,6 +82,8 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/translations/langs.csv
+    - assets/images/introduction/
+    - assets/animation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

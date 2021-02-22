@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:vtenhappmerchant/models/global_model.dart';
 import 'package:vtenhappmerchant/notifiers/langs_notifier.dart';
-import 'package:vtenhappmerchant/social_signin.dart';
-import 'constants/config_constant.dart';
-import 'mixins/toast.dart';
-import 'notifiers/theme_notifier.dart';
-import 'widgets/scale_down_on_tap.dart';
-import 'extensions/locale_extensions.dart';
+import 'package:vtenhappmerchant/screens/authentication/social_signin.dart';
+import '../constants/config_constant.dart';
+import '../mixins/toast.dart';
+import '../notifiers/theme_notifier.dart';
+import '../widgets/scale_down_on_tap.dart';
+import '../extensions/locale_extensions.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key key, this.title = "MyApp"}) : super(key: key);
   final String title;
 
   @override
@@ -45,13 +45,13 @@ class _MyHomePageState extends State<MyHomePage> with Toast {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(tr('you_can_push_the_button_this_many_times')),
-            const SizedBox(height: ConfigConstant.margin),
+            const SizedBox(height: ConfigConstant.margin1),
 
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            const SizedBox(height: ConfigConstant.margin),
+            const SizedBox(height: ConfigConstant.margin1),
 
             //error toast
             FlatButton(
@@ -103,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> with Toast {
                     langs.length,
                     (index) => Container(
                       margin: EdgeInsets.only(
-                        left: index == langs.length - 1 ? ConfigConstant.margin : 0,
+                        left: index == langs.length - 1 ? ConfigConstant.margin2 : 0,
                       ),
                       child: FlatButton(
                         color: Theme.of(context).canvasColor,
@@ -120,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> with Toast {
               },
             ),
 
-            const SizedBox(height: ConfigConstant.margin),
+            const SizedBox(height: ConfigConstant.margin2),
 
             //social sign in
             SocialSignIn(),

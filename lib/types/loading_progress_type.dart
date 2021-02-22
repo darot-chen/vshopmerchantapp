@@ -1,0 +1,4 @@
+enum LoadingProgressType {
+  loading,
+  loaded,
+}

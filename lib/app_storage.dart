@@ -10,8 +10,8 @@ class AppStorage {
 
   static BaseStorageAdapter get preferenceAdapter {
     if (_preferenceAdapter != null) return _preferenceAdapter;
-    _preferenceAdapter = SharedPreferenceStorageAdapter();
-    // _preferenceAdapter = MemoryStorageAdapter();
+    // _preferenceAdapter = SharedPreferenceStorageAdapter();
+    _preferenceAdapter = MemoryStorageAdapter();
     //  _secureAdapter = SecureStorageAdapter();
     return _preferenceAdapter;
   }
