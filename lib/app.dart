@@ -1,7 +1,9 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:vtenhappmerchant/constants/config_constant.dart';
+import 'package:vtenhappmerchant/mixins/toast.dart';
 import 'package:vtenhappmerchant/notifiers/theme_notifier.dart';
 import 'package:vtenhappmerchant/widgets/scale_down_on_tap.dart';
 
@@ -9,11 +11,20 @@ class App extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final notifier = useProvider(themeNotifier);
+
     return MaterialApp(
       title: 'VTenh Merchant',
       home: MyHomePage(title: 'VTenh App Example'),
+
+      //theme
       themeMode: notifier.themeMode,
       theme: notifier.themeData,
+
+      //init toast
+      builder: BotToastInit(),
+      navigatorObservers: [
+        BotToastNavigatorObserver(),
+      ],
     );
   }
 }
@@ -26,7 +37,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> with Toast {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -53,17 +64,47 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('You have pushed the button this many times:'),
+            const SizedBox(height: ConfigConstant.margin),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            const SizedBox(height: ConfigConstant.margin),
+
+            //error toast
+            FlatButton(
+              color: Theme.of(context).errorColor,
+              child: Text(
+                "Show Error Toast",
+                style: TextStyle(color: Colors.white),
+              ),
+              onPressed: () {
+                showError(context: context, title: "Error Toast", subtitle: "This is error toast example");
+              },
+            ),
+            //success toast
+            FlatButton(
+              color: Theme.of(context).accentColor,
+              child: Text(
+                "Show Success Toast",
+                style: TextStyle(color: Colors.white),
+              ),
+              onPressed: () {
+                showSuccess(context: context, title: "Success Toast", subtitle: "This is success toast example");
+              },
+            ),
+            //nigth mode
             FlatButton.icon(
-              label: Text("Night Mode"),
+              color: Theme.of(context).disabledColor,
               icon: Icon(Icons.brightness_2),
+              label: Text(
+                "Night Mode: " + notifier.isDarkMode.toString().toUpperCase(),
+                style: TextStyle(color: Colors.white),
+              ),
               onPressed: () {
                 notifier.setMode(!notifier.isDarkMode);
               },
-            )
+            ),
           ],
         ),
       ),
