@@ -110,6 +110,9 @@ flutter:
     - assets/images/introduction/
     - assets/animation/
     - assets/images/product/
+    - assets/images/MyProduct/
+    - assets/images/orderIcons/
+    - assets/images/shopLogo/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

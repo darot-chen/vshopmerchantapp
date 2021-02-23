@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vtenhappmerchant/screens/account/account_setting_screen.dart';
-import 'package:vtenhappmerchant/screens/home/homescreen.dart';
+import 'package:vtenhappmerchant/screens/home/home_screen.dart';
 import 'package:vtenhappmerchant/screens/notification/notification_screen.dart';
 import 'package:vtenhappmerchant/screens/product/product_screen.dart';
 

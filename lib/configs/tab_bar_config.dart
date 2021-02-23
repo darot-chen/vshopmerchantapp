@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:vtenhappmerchant/app_router.dart';
 import 'package:vtenhappmerchant/configs/tab_bar_config_item.dart';
 import 'package:vtenhappmerchant/screens/account/account_screen_wrapper.dart';
-import 'package:vtenhappmerchant/screens/home/homescreen.dart';
+import 'package:vtenhappmerchant/screens/home/home_screen.dart';
+
 import 'package:vtenhappmerchant/screens/notification/notification_screen.dart';
 import 'package:vtenhappmerchant/screens/product/product_screen.dart';
 import 'package:vtenhappmerchant/src/widgets/icons.dart';
