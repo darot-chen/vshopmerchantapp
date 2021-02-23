@@ -1,5 +1,6 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:vtenhappmerchant/notifiers/langs_notifier.dart';
@@ -12,6 +13,10 @@ class App extends HookWidget {
   Widget build(BuildContext context) {
     final notifier = useProvider(themeNotifier);
     final localNotifier = useProvider(langsNotifier(context))..load();
+
+    SystemChrome.setSystemUIOverlayStyle(
+      notifier.isDarkMode ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark,
+    );
 
     return MaterialApp(
       title: 'VTenh Merchant',

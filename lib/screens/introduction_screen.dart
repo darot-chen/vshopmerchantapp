@@ -4,19 +4,12 @@ import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
 import 'package:vtenhappmerchant/configs/introduction_config.dart';
 import 'package:vtenhappmerchant/extensions/list_map_with_index_extension.dart';
-import 'package:vtenhappmerchant/screens/my_home_page.dart';
+import 'package:vtenhappmerchant/screens/app_bar_main_screen.dart';
 import 'package:vtenhappmerchant/storages/main_screen_storage.dart';
 
-class IntroductionScreen extends StatefulWidget {
-  IntroductionScreen({Key key}) : super(key: key);
-
-  @override
-  _IntroductionScreenState createState() => _IntroductionScreenState();
-}
-
-class _IntroductionScreenState extends State<IntroductionScreen> {
+class IntroductionScreen extends StatelessWidget {
   // Function goToTab;
-  List<Slide> slides = IntroductionConfig.sliders();
+  final List<Slide> slides = IntroductionConfig.sliders();
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +44,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
         await landingStorage.setValue(true);
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-            builder: (_) => MyHomePage(),
+            builder: (_) => AppBarMainScreen(),
           ),
         );
       },
@@ -61,7 +54,9 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
       typeDotAnimation: dotSliderAnimation.SIZE_TRANSITION,
 
       // Tabs
-      listCustomTabs: slides.mapWithIndex((e, index) => _renderTabItem(e, index)),
+      listCustomTabs: slides.mapWithIndex(
+        (e, index) => _renderTabItem(e, index, context: context),
+      ),
       backgroundColorAllSlides: Colors.white,
 
       // Show or hide status bar
@@ -74,7 +69,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
     );
   }
 
-  Widget _renderCallToActionLastSlide() {
+  Widget _renderCallToActionLastSlide(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 30.0),
       child: Row(
@@ -111,7 +106,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
     );
   }
 
-  Widget _renderTabItem(Slide slide, int index) {
+  Widget _renderTabItem(Slide slide, int index, {@required BuildContext context}) {
     bool isLastSlide = index == slides.length - 1;
 
     return Container(
@@ -150,7 +145,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
               ),
               margin: EdgeInsets.only(top: 10.0),
             ),
-            if (isLastSlide) _renderCallToActionLastSlide()
+            if (isLastSlide) _renderCallToActionLastSlide(context)
           ],
         ),
       ),
