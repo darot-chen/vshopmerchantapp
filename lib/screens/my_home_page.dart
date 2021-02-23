@@ -5,6 +5,7 @@ import 'package:vtenhappmerchant/models/global_model.dart';
 import 'package:vtenhappmerchant/notifiers/langs_notifier.dart';
 import 'package:vtenhappmerchant/screens/account/account_screen_wrapper.dart';
 import 'package:vtenhappmerchant/screens/authentication/social_signin.dart';
+import 'package:vtenhappmerchant/src/widgets/icons.dart';
 import '../constants/config_constant.dart';
 import '../mixins/toast.dart';
 import '../notifiers/theme_notifier.dart';
@@ -76,6 +77,15 @@ class _MyHomePageState extends State<MyHomePage> with Toast {
                 showSuccess(context: context, title: "Success Toast", subtitle: "This is success toast example");
               },
             ),
+
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Iconly.outline2User,
+                color: Colors.red,
+              ),
+            ),
+
             //nigth mode
             Consumer(
               builder: (context, reader, child) {
