@@ -14,5 +14,8 @@ class ApiConstant {
   static final String clientId = '';
   static final String clientSecret = '';
 
+  static final String localizeEndPoint =
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vRfC4yLNMc6p96WVQpCwAxnq3s2Va-tvee2yaA9YTl4c5TaGOfx_iGxWjeYIzdMmKGRSqXSI6pewAq0/pub?gid=1286847532&single=true&output=csv";
+
   static final int recordPerPage = 10;
 }
